@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CR7 | Intergaláctico</title>
+    <style>
+        :root { --cr7-gold: #FFD700; --bg: #050505; }
+        body { margin: 0; background-color: var(--bg); color: white; font-family: 'Arial', sans-serif; }
+        
+        /* Hero Section */
+        .hero { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://wallpaperaccess.com/full/1569476.jpg'); background-size: cover; }
+        h1 { font-size: 6rem; margin: 0; color: var(--cr7-gold); text-shadow: 0 0 20px rgba(255,215,0,0.5); animation: glow 2s infinite; }
+        
+        @keyframes glow { 0%, 100% { text-shadow: 0 0 10px var(--cr7-gold); } 50% { text-shadow: 0 0 40px var(--cr7-gold); } }
+
+        /* Galería */
+        .container { padding: 50px; text-align: center; }
+        .gallery { display: flex; justify-content: center; gap: 20px; margin-top: 30px; }
+        .card { width: 250px; height: 350px; overflow: hidden; border: 2px solid var(--cr7-gold); border-radius: 10px; cursor: pointer; transition: 0.4s; }
+        .card img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+        
+        /* Efecto al pasar el mouse */
+        .card:hover img { transform: scale(1.2) rotate(5deg); filter: grayscale(100%) brightness(1.5); }
+        .card:hover { box-shadow: 0 0 30px var(--cr7-gold); }
+
+        /* Video Section */
+        .video-box { margin-top: 50px; border: 5px solid white; display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>CRISTIANO RONALDO</h1>
+        <p>El hombre que desafió la gravedad.</p>
+    </div>
+
+    <div class="container">
+        <h2>Galería de Épocas (Pasa el mouse)</h2>
+        <div class="gallery">
+            <div class="card"><img src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt9d8b30d32f523e0d/62a1b94e33917a10738d0119/Cristiano_Ronaldo_Real_Madrid.jpg" alt="Real Madrid"></div>
+            <div class="card"><img src="https://img.olympicchannel.com/images/image/private/t_16-9_3200/primary/h671d1g4y7r7f5n2q6g8" alt="Portugal"></div>
+            <div class="card"><img src="https://static.independent.co.uk/2023/01/03/10/Cristiano_Ronaldo_Al_Nassr_1.jpg" alt="Al Nassr"></div>
+        </div>
+
+        <div class="video-box">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aE1n9D-w6iM" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        console.log("Modo Intergaláctico Activado");
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseover', () => {
+                card.style.borderColor = 'white';
+            });
+            card.addEventListener('mouseout', () => {
+                card.style.borderColor = '#FFD700';
+            });
+        });
+    </script>
+</body>
+</html>
